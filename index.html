@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="sf_avatar.png" />
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Scott Franz</title>
+  </head>
+  
+  <body>
+    <div class="centered fontSize">
+      <h1>Scott Franz</h1>
+      <p>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+      </p>
+    </div>
+
+    <div id="chart"></div>
+    <p class="fontSize">Email: <a href="https://mail.google.com/mail/u/0/?fs=1&to=scottafranz@gmail.com&tf=cm">scottafranz@gmail.com</a></p>
+    
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+    import notebook from "https://api.observablehq.com/@frscott/collision-detection.js?v=3";
+   
+   const runtime = new Runtime;
+
+   runtime.module(notebook, name => {
+    if (name === "chart") {
+      return new Inspector(document.querySelector(`#${name}`));
+    }
+  });
+    </script>
+
+
+
+  </body>
+</html>
