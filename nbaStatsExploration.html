@@ -14,8 +14,8 @@ const mediaQuery = window.matchMedia('(max-width: 500px)')
 function handleTabletChange(e) {
   // Check if the media query is true
   if (e.matches) {
-    // Then log the following message to the console
-    alert("If you are on a mobile device turn your phone horizontally for best results.")
+    
+    alert("If you are on a mobile device turn your phone horizontally for best results.");
   }
 }
 // Register event listener
@@ -39,22 +39,17 @@ handleTabletChange(mediaQuery)
   average points, rebounds, or assists in the NBA over this time period (with at least 10 seasons played). Can you guess who the noodles are in these spaghetti charts?
    You can mouseover the noodles for the player name and/or click the checkbox below to show more detailed statistics of each chart.</p></div>
 <h2 class="center font">Leading Scorers</h2>
-<div class="center font" id="observablehq-charts1-cb3ea733"></div>
-<div class="font fontSize" id="observablehq-viewof-showPtsChart-cb3ea733"></div>
-<div class="center font" id="observablehq-ptsChart-cb3ea733"></div>
-<div style="display: none;" class="center font" id="observablehq-ptsChart2-cb3ea733"></div>
+<div class="center" id="observablehq-ptsChart-8caaeb59"></div>
+<div class="font fontSize" id="observablehq-viewof-showPtsChart-8caaeb59"></div>
+
 
 <h2 class="center font">Leading Rebounders</h2>
-<div class="center font" id="observablehq-charts2-cb3ea733"></div>
-<div class="font fontSize" id="observablehq-viewof-showRebChart-cb3ea733"></div>
-<div class="center font" id="observablehq-rebChart-cb3ea733"></div>
-<div style="display: none;" class="center font" id="observablehq-rebChart2-cb3ea733"></div>
+<div class="center" id="observablehq-rebChart-8caaeb59"></div>
+<div class="font fontSize" id="observablehq-viewof-showRebChart-8caaeb59"></div>
 
 <h2 class="center font">Leading Assisters</h2>
-<div class="center font" id="observablehq-charts3-cb3ea733"></div>
-<div class="font fontSize" id="observablehq-viewof-showAstChart-cb3ea733"></div>
-<div class="center font" id="observablehq-astChart-cb3ea733"></div>
-<div style="display: none;" class="center font" id="observablehq-astChart2-cb3ea733"></div>
+<div class="center" id="observablehq-astChart-8caaeb59"></div>
+<div class="font fontSize" id="observablehq-viewof-showAstChart-8caaeb59"></div>
 
 <h2 class="center font">Filter by College</h2>
 <div class="center font" id="observablehq-collegeChart-cb3ea733"></div>
@@ -78,6 +73,16 @@ handleTabletChange(mediaQuery)
   If you want to just see the code click on the notebook below.</p></div>
 <p class="fontSize">Credit: <a href="https://observablehq.com/@scottfranz/nba-stats-exploration">NBA Stats Exploration by Scott Franz</a></p>
 
+<div style="display: none;" id="observablehq-makeChart1-8caaeb59"></div>
+<div style="display: none;" id="observablehq-ptsChart1-8caaeb59"></div>
+<div style="display: none;" id="observablehq-ptsChart2-8caaeb59"></div>
+<div style="display: none;" id="observablehq-makeChart2-8caaeb59"></div>
+<div style="display: none;" id="observablehq-rebChart1-8caaeb59"></div>
+<div style="display: none;" id="observablehq-rebChart2-8caaeb59"></div>
+<div style="display: none;" id="observablehq-makeChart3-8caaeb59"></div>
+<div style="display: none;" id="observablehq-astChart1-8caaeb59"></div>
+<div style="display: none;" id="observablehq-astChart2-8caaeb59"></div>
+
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/d/a4384a44bbc227aa.js?v=3";
@@ -85,18 +90,21 @@ new Runtime().module(define, name => {
   if (name === "exploreChart") return new Inspector(document.querySelector("#observablehq-exploreChart-cb3ea733"));
   if (name === "viewof radio") return new Inspector(document.querySelector("#observablehq-viewof-radio-cb3ea733"));
   if (name === "viewof checkbox") return new Inspector(document.querySelector("#observablehq-viewof-checkbox-cb3ea733"));
-  if (name === "charts1") return new Inspector(document.querySelector("#observablehq-charts1-cb3ea733"));
-  if (name === "viewof showPtsChart") return new Inspector(document.querySelector("#observablehq-viewof-showPtsChart-cb3ea733"));
-  if (name === "ptsChart") return new Inspector(document.querySelector("#observablehq-ptsChart-cb3ea733"));
-  if (name === "ptsChart2") return new Inspector(document.querySelector("#observablehq-ptsChart2-cb3ea733"));
-  if (name === "charts2") return new Inspector(document.querySelector("#observablehq-charts2-cb3ea733"));
-  if (name === "viewof showRebChart") return new Inspector(document.querySelector("#observablehq-viewof-showRebChart-cb3ea733"));
-  if (name === "rebChart") return new Inspector(document.querySelector("#observablehq-rebChart-cb3ea733"));
-  if (name === "rebChart2") return new Inspector(document.querySelector("#observablehq-rebChart2-cb3ea733"));
-  if (name === "charts3") return new Inspector(document.querySelector("#observablehq-charts3-cb3ea733"));
-  if (name === "viewof showAstChart") return new Inspector(document.querySelector("#observablehq-viewof-showAstChart-cb3ea733"));
-  if (name === "astChart") return new Inspector(document.querySelector("#observablehq-astChart-cb3ea733"));
-  if (name === "astChart2") return new Inspector(document.querySelector("#observablehq-astChart2-cb3ea733"));
+  if (name === "ptsChart") return new Inspector(document.querySelector("#observablehq-ptsChart-8caaeb59"));
+  if (name === "viewof showPtsChart") return new Inspector(document.querySelector("#observablehq-viewof-showPtsChart-8caaeb59"));
+  if (name === "rebChart") return new Inspector(document.querySelector("#observablehq-rebChart-8caaeb59"));
+  if (name === "viewof showRebChart") return new Inspector(document.querySelector("#observablehq-viewof-showRebChart-8caaeb59"));
+  if (name === "astChart") return new Inspector(document.querySelector("#observablehq-astChart-8caaeb59"));
+  if (name === "viewof showAstChart") return new Inspector(document.querySelector("#observablehq-viewof-showAstChart-8caaeb59"));
+  if (name === "makeChart1") return new Inspector(document.querySelector("#observablehq-makeChart1-8caaeb59"));
+  if (name === "ptsChart1") return new Inspector(document.querySelector("#observablehq-ptsChart1-8caaeb59"));
+  if (name === "ptsChart2") return new Inspector(document.querySelector("#observablehq-ptsChart2-8caaeb59"));
+  if (name === "makeChart2") return new Inspector(document.querySelector("#observablehq-makeChart2-8caaeb59"));
+  if (name === "rebChart1") return new Inspector(document.querySelector("#observablehq-rebChart1-8caaeb59"));
+  if (name === "rebChart2") return new Inspector(document.querySelector("#observablehq-rebChart2-8caaeb59"));
+  if (name === "makeChart3") return new Inspector(document.querySelector("#observablehq-makeChart3-8caaeb59"));
+  if (name === "astChart1") return new Inspector(document.querySelector("#observablehq-astChart1-8caaeb59"));
+  if (name === "astChart2") return new Inspector(document.querySelector("#observablehq-astChart2-8caaeb59"));
   if (name === "collegeChart") return new Inspector(document.querySelector("#observablehq-collegeChart-cb3ea733"));
   if (name === "viewof radio2") return new Inspector(document.querySelector("#observablehq-viewof-radio2-cb3ea733"));
   if (name === "viewof collegepick") return new Inspector(document.querySelector("#observablehq-viewof-collegepick-cb3ea733"));
@@ -113,3 +121,5 @@ new Runtime().module(define, name => {
   return ["filtered"].includes(name);
 });
 </script>
+
+
