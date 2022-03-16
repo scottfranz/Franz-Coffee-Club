@@ -17,20 +17,18 @@
       </p>
     </div>
 
-    <div id="chart"></div>
+    <div id="observablehq-chart-85a5a834"></div>
     <p class="fontSize">Email: <a href="https://mail.google.com/mail/u/0/?fs=1&to=scottafranz@gmail.com&tf=cm">scottafranz@gmail.com</a></p>
     
-    <script type="module">
-    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-    import notebook from "https://api.observablehq.com/@frscott/collision-detection.js?v=3";
-   
-   const runtime = new Runtime;
+    
 
-   runtime.module(notebook, name => {
-    if (name === "chart") {
-      return new Inspector(document.querySelector(`#${name}`));
-    }
-  });
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/f9fc7a4b21ff301b.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-85a5a834"));
+});
+</script>
     </script>
 
 
