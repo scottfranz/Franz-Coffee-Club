@@ -1,1 +1,0 @@
-# scottfranz.github.io
