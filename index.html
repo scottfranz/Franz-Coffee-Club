@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franz Coffee Club</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #040404;
+            color: #fff;
+        }
+
+        .logo {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="email"], button {
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            width: 320px; /* Approximate width of the rectangle's edges */
+            max-width: 90%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #ff914d;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ff6a00;
+        }
+    </style>
+</head>
+<body>
+    <img src="FranzLogoWide.png" alt="Franz Coffee Club Logo" class="logo">
+    <form action="https://forms.mlsrblt.com/submit" method="POST">
+        <!-- Replace the action URL with your MailerLite form endpoint -->
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Join the Club</button>
+    </form>
+</body>
+</html>
+
